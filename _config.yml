@@ -5,12 +5,13 @@ theme: just-the-docs
 url: https://ender3ng.themakermedic.com
 
 aux_links:
-  The Maker Medic: https://themakermedic.om
+  The Maker Medic: https://themakermedic.com
 
 #logo:
 #favicon_ico:
 
 color_scheme: tmm
 
-
+plugins:
+ - jemoji
 
