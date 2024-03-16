@@ -1,8 +1,16 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Ender 3 NG Log
+description: A log and guide of my Ender 3 NG build
 theme: just-the-docs
 
 url: https://ender3ng.themakermedic.com
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  The Maker Medic: https://themakermedic.om
+
+#logo:
+#favicon_ico:
+
+color_scheme: tmm
+
+
+
