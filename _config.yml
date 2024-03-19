@@ -15,3 +15,8 @@ color_scheme: tmm
 plugins:
  - jemoji
 
+callouts:
+  note:
+    color: grey-lt
+  alert:
+    color: yellow
