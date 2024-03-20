@@ -38,8 +38,8 @@ All of the parts were sliced in [OrcaSlicer](https://github.com/SoftFever/OrcaSl
 
 For reference, the below 3MF files include the printer, filament, and process settings used on my Voron 0.2.
 
-* [Voron 0.2 Main Part Project File]()
-* [Voron 0.2 Accent Part Project File]()
+* [Voron 0.2 Main Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Main_Parts-Voron.3mf)
+* [Voron 0.2 Accent Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Accent_Parts-Voron.3mf)
 
 ### Printing ABS on the Ender
 
@@ -59,6 +59,6 @@ Full disclosure, my Ender 3 Neo is not stock. Some of the notable changes are:
 Below are the 3MF files the include the settings used on my Ender 3. 
 
 * [Ender 3 Main Part Project File]() <small>*Printed with eSUN Black ABS+</small> 
-* [Ender 3 Accent Part Project File]()
+* [Ender 3 Accent Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Accent_Parts-Ender.3mf)
 
 I managed to print these parts without an enclosure. Hairspray and a brim was used to aid with bed adhesion. 
