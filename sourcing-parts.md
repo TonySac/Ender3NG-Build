@@ -9,7 +9,7 @@ has_children: true
 
 This build recycles most of the frame and electronics from the Ender 3. However some new motion components are required such as the linear rods and bearings. Additional fasteners are also needed and the new structural components must be 3D printed.
 
-Unlike Voron, there is no *Print it Forward* program. Nor are there any official kits for this build, at least not yet. All of the required parts, STLs, and sourcing recommendations are on [Printables](https://www.printables.com/model/469280-ender-3-ng-corexy-beta).
+Currently, there is no *Print it Forward* program. Nor are there any official kits for this build, at least not yet. All of the required parts, STLs, and sourcing recommendations are on [Printables](https://www.printables.com/model/469280-ender-3-ng-corexy-beta).
 
 ## Tools and Miscellaneous Items
 
@@ -34,6 +34,8 @@ The same goes for these consumables:
 * Grease (Mobilux EP2)
 * Blue Loctite
 * CA (super) glue
+* Zip ties
+* Heat shrink
 
 Fortunately, I had most of these things left over from previous projects. 
 
