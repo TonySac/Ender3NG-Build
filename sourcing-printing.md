@@ -7,21 +7,22 @@ parent: Sourcing Parts
 
 # Printing Parts
 
-I printed most of my parts on my Voron 0.2. However, since the build volume is so small, some of the larger parts didn't fit. I used my Ender 3 Neo to crank out some of the larger parts.
+I printed most of my parts on my Voron 0.2. However, since the build volume is so small, some of the larger parts didn't fit. I used my Ender 3 Neo to crank out some of the larger parts before the tear down.
 
-{: .alert }
+{: .tip }
 Make sure to print everything prior to tearing down your only working printer.
 
-A specialized calibration cube is included in the project files to confirm tolerances. I printed one off on both my Voron and Ender 3 prior to printing the functional parts.
+<img src="/assets/calicube.png" width="150" />{: .float-right}{: .ml-3}
+
+A [special calibration cube](https://www.printables.com/model/478403-ender-3-ng-corexy-teasertest-cube) is included with the project. I printed one off on both my Voron and Ender 3 prior to printing the functional parts. Along with a visual inspection, I used the 8mm threaded rod on my Ender 3 and some spare heat set inserts to check my tolerances.
 
 ## Materials
 
-<img src="/assets/voron0.png" width="200" />
-{: .float-right}
+<img src="/assets/voron0.png" width="200" />{: .float-left}{: .mr-3}
 
-I chose to print all of my parts in ABS. ABS along with ASA are the recommended materials. I didn't have any experience with ASA. I was pleased with the ABS parts I received for my previous Voron build and I figured if ABS is good enough for Voron, it will be good enough here.
+I chose to print all of my parts in ABS. ABS is one of the recommended materials and is the Voron standard. I was pleased with the ABS parts I received for my  Voron build and I figured I would continue to use it.
 
-Specifically, I used *Sunlu Black ABS* for the majority of the primary parts and *Fusion Filaments Seismic Red ABS 1.5* for the accent parts. These are the same colors and filaments used on my Voron 0.2 and I wanted to keep with the color scheme.
+Specifically, I used *Sunlu Black ABS* for the main structural parts and *Fusion Filaments Seismic Red ABS 1.5* for the accent colored parts. These are the same colors and filaments used on my Voron 0.2 and I wanted to keep with the color scheme. I also picked up a spool of *eSun Black ABS+*. I plan to use the eSun for the main color electronics panel parts since those are not structural and will be printed on the Ender.
 
 ## Print Settings
 
@@ -66,4 +67,4 @@ Below are the 3MF files the include the settings used on my Ender 3.
 * [Ender 3 Main Part Project File]()
 * [Ender 3 Accent Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Accent_Parts-Ender.3mf)
 
-I managed to print these parts without an enclosure. Hairspray and a brim was used to aid with bed adhesion. I did have some mild warping of larger electronics panel parts. I don't foresee this causing issues during assembly as they do not appear to be structural in nature. I will likely reprint them down the road.
+I managed to print these parts without an enclosure. Hairspray and a brim was used to aid with bed adhesion. I did have some mild warping of larger electronics panel parts. I'm not overly concerned as they are not structural parts. I plan to reprint them down the road.

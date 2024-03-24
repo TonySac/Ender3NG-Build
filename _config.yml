@@ -18,5 +18,11 @@ plugins:
 callouts:
   note:
     color: grey-lt
-  alert:
-    color: yellow
+  tip:
+    color: green
+  mod:
+    title: Modification
+    color: pink
+  warning:
+    title: Warning
+    color: red

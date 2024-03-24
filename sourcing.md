@@ -9,22 +9,19 @@ has_children: true
 
 This build recycles most of the frame and electronics from the Ender 3. However some new motion components are required such as the linear rods and bearings. Additional fasteners are also needed and the new structural components must be 3D printed.
 
-Currently, there is no *Print it Forward* program. Nor are there any official kits for this build, at least not yet. All of the required parts, STLs, and sourcing recommendations are on [Printables](https://www.printables.com/model/469280-ender-3-ng-corexy-beta).
+As of this writing, there are no official parts kits (printed or otherwise). All of the required parts, STLs, and sourcing recommendations are on [Printables](https://www.printables.com/model/469280-ender-3-ng-corexy-beta).
 
 ## Tools and Miscellaneous Items
 
 Depending on your tool collection and how in depth this build goes, some additional things will be nice to have on hand that may have not been specified in the BOM.
 
-I made use of the following tools during the build:
+So far, I have made use of the following tools:
 
 * Decent (metric) allen keys
 * Small screwdrivers
 * Needle nose pliers and/or tweezers
 * Wire cutters & strippers
 * Assorted crimping tools (pin, terminal, ferrule)
-* Tap set
-* Magnet
-* Syringes
 * Deburring tool
 * Lighter
 * Soldering iron
@@ -55,4 +52,4 @@ I put together a small breakdown to help me keep track of costs and help justify
 
 <small>Prices in USD</small>
 
-Not all costs were accounted for but this gives a rough estimate. I discuss some of these categories in more detail on the following pages.
+Not all costs were accounted for but this gives a rough estimate. Assuming and Ender style printer is already on hand, I expect most people can complete this conversion for less than $300 USD in parts.
