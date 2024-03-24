@@ -10,7 +10,7 @@ aux_links:
 #logo:
 #favicon_ico:
 
-color_scheme: tmm
+color_scheme: dark
 
 plugins:
  - jemoji
