@@ -2,6 +2,8 @@
 title: Overview
 layout: default
 nav_order: 1
+posted: 2024-03-16
+updated: 2024-03-24
 ---
 
 # The Maker Medic's Ender 3 NG
@@ -11,16 +13,16 @@ I designed this site to log my Ender 3 NG build. It may read as both a process l
 Not everything in this log is to spec. I have attempted to use the following highlights in this documentation:
 
 {: .note}
-General notes
+:pencil: General notes
 
 {: .tip}
-Tips and tricks 
+:bulb: Tips and tricks 
 
 {: .mod }
-Changes made when compared to the official documentation
+:wrench: Changes made when compared to the official documentation
 
-{: .warning }
-Warnings of potential property damage or physical harm
+{: .warn }
+:warning: Warnings of potential property damage or physical harm
 
 ## Background
 

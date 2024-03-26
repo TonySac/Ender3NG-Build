@@ -1,0 +1,11 @@
+<footer>
+    {% if page.posted %}
+    <p class="text-small text-grey-dk-000 mb-0 mr-2">
+        Posted: {{ page.posted | date: "%B %e, %Y" }}.
+        {% if page.updated %}
+        <br>
+        Updated: {{ page.updated | date: "%B %e, %Y" }}.
+        {% endif %}
+    </p> 
+    {% endif %}
+</footer>

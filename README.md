@@ -1,11 +1,11 @@
 
 # The Maker Medic's Ender 3 NG Documentation
 
-Visit my [documentation/log page.](https://ender3ng.themakermedic.com)
+Visit my [documentation/log page](https://ender3ng.themakermedic.com).
 
 <b>OR</b>
 
-Check out my main [website.](https://themakermedic.com)
+Check out my main [website](https://themakermedic.com).
 
 <small>
 

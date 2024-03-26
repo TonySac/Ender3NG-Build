@@ -3,6 +3,8 @@ title: Printing Parts
 layout: default
 nav_order: 2
 parent: Sourcing Parts
+posted: 2024-03-19
+updated: 2024-03-22
 ---
 
 # Printing Parts
@@ -10,7 +12,7 @@ parent: Sourcing Parts
 I printed most of my parts on my Voron 0.2. However, since the build volume is so small, some of the larger parts didn't fit. I used my Ender 3 Neo to crank out some of the larger parts before the tear down.
 
 {: .tip }
-Make sure to print everything prior to tearing down your only working printer.
+:bulb: Make sure to print everything prior to tearing down your only working printer.
 
 <img src="/assets/calicube.png" width="150" />{: .float-right}{: .ml-3}
 

@@ -6,6 +6,7 @@ url: https://ender3ng.themakermedic.com
 
 aux_links:
   The Maker Medic: https://themakermedic.com
+  3D Printing: https://themakermedic.com/3D/
 
 #logo:
 #favicon_ico:
@@ -21,8 +22,6 @@ callouts:
   tip:
     color: green
   mod:
-    title: Modification
     color: pink
-  warning:
-    title: Warning
+  warn:
     color: red
