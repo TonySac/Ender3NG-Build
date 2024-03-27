@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 parent: Sourcing Parts
 posted: 2024-03-19
-updated: 2024-03-22
+updated: 2024-03-27
 ---
 
 # Printing Parts
@@ -44,7 +44,7 @@ All of the parts were sliced in [OrcaSlicer](https://github.com/SoftFever/OrcaSl
 
 <img src="/assets/main-parts.png" />
 
-For reference, the below 3MF files include the printer, filament, and process settings used on my Voron 0.2.
+For reference, the below 3MF files include the printer, filament, and process settings used on my Voron 0.2. They should load into OrcaSlicer with all of the same settings I used.
 
 * [Voron 0.2 Main Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Main_Parts-Voron.3mf)
 * [Voron 0.2 Accent Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Accent_Parts-Voron.3mf)
@@ -59,14 +59,15 @@ Full disclosure, my Ender 3 Neo is not stock. Some of the notable changes are:
 * Klipper Firmware
     * Input Shaping
 * Upgraded NEMA 17 Steppers
-* Stealthbuner Toolhead
+* Stealthbuner Toolhead (Currently reduced build volume)
     * Clockwork 2 Direct Drive Extruder
     * Phaetus Dragonfly BMO Hotend
 * Textured PEI Plate
 
-Below are the 3MF files the include the settings used on my Ender 3. 
+Once again, I included the 3MF files for the parts printed on my Ender 3. 
 
-* [Ender 3 Main Part Project File]()
+* [Ender 3 Main Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Main_Parts-Ender.3mf)
 * [Ender 3 Accent Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Accent_Parts-Ender.3mf)
 
-I managed to print these parts without an enclosure. Hairspray and a brim was used to aid with bed adhesion. I did have some mild warping of larger electronics panel parts. I'm not overly concerned as they are not structural parts. I plan to reprint them down the road.
+I managed to print these parts without an enclosure using *Fusion Filaments Seismic Red ABS* for the accent parts and *eSun Black ABS+* for the main parts.
+I added a brim and hairspray to assist with bed adhesion. The electronics panels printed without issues but I did have some minimal warping on the taller motor cover parts. I don't foresee it causing problems during assembly and I can reprint them later if need be. parts. I also didn't notice the E3NG logo inlay on the panels until after I started printing :frowning_face:. I guess I'll have to reprint those down the road with a color change.
