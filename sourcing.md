@@ -4,16 +4,28 @@ layout: default
 nav_order: 2
 has_children: true
 posted: 2024-03-19
-updated: 2024-03-20
+updated: 2024-04-06
 ---
 
 # Sourcing Parts
+{: .no_toc }
+
+<details closed markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
 
 This build recycles most of the frame and electronics from the Ender 3. However some new motion components are required such as the linear rods and bearings. Additional fasteners are also needed and the new structural components must be 3D printed.
 
 As of this writing, there are no official parts kits (printed or otherwise). All of the required parts, STLs, and sourcing recommendations are on [Printables](https://www.printables.com/model/469280-ender-3-ng-corexy-beta).
 
-## Tools and Miscellaneous Items
+## Tools and Consumables
 
 Depending on your tool collection and how in depth this build goes, some additional things will be nice to have on hand that may have not been specified in the BOM.
 
@@ -24,9 +36,10 @@ So far, I have made use of the following tools:
 * Needle nose pliers and/or tweezers
 * Wire cutters & strippers
 * Assorted crimping tools (pin, terminal, ferrule)
-* Deburring tool
-* Lighter
+* Deburring tool & pick set
+* Lighter/heat gun
 * Soldering iron
+* Drill & tap set
 
 The same goes for these consumables:
 
@@ -35,8 +48,9 @@ The same goes for these consumables:
 * CA (super) glue
 * Zip ties
 * Heat shrink
+* Isopropyl alcohol
 
-Fortunately, I had most of these things left over from previous projects. 
+Fortunately, I had most of these things left over from previous projects.
 
 ## Cost Breakdown
 

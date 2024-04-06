@@ -1,7 +1,7 @@
 
 # The Maker Medic's Ender 3 NG Documentation
 
-Visit my [documentation/log page](https://ender3ng.themakermedic.com).
+Visit my [documentation/log page](https://e3nglog.themakermedic.com).
 
 <b>OR</b>
 
