@@ -26,8 +26,7 @@ In order to streamline assembly, I inspected parts as they were received or prin
 <img src="/assets/printed-parts.png" width="350" />
 <img src="/assets/sourced-parts.png" width="350" />{: .float-right}
 
-
-## Inspection and Post Process
+# Inspection and Post Process
 
 As the parts came off the printer, I inspected them for quality. I already confirmed tolerances with the calibration cube prior to producing my parts. At this point, I was looking at the finish and for any unacceptable defects.
 
@@ -39,14 +38,14 @@ I used a deburring tool and a small pick to remove brims and clean up the edges.
 {: .note }
 :pencil: A heat gun would probably be a better choice.
 
-## Heat Inserts
+# Heat Inserts
 
 Once most parts were printed, I went page by page in the build manual and sunk the appropriate heat inserts. By placing all the inserts in advance, I could just pick up and go when it was time to build, rather than pause to place them at each step. I just used a soldering iron with a standard tip to sink these, no special tools.
 
 {: .tip }
 :bulb: Use a flat metal surface to push against the insert after it is in place to help it set level and flush to the plastic part.
 
-## Lubricating Bearings
+# Lubricating Bearings
 
 <img src="/assets/bearing-pack.png" width="200" />{: .float-right}{: .ml-3} 
 

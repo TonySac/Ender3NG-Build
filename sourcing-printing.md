@@ -30,9 +30,7 @@ I printed most of my parts on my Voron 0.2. However, with only a 120 x 120 build
 
 A [special calibration cube](https://www.printables.com/model/478403-ender-3-ng-corexy-teasertest-cube) is included with the project. I printed one off on both my Voron and Ender 3 prior to printing the functional parts. Along with a visual inspection, I used the 8mm threaded rod on my Ender 3 and some spare heat set inserts to check my tolerances.
 
-<br>
-
-## Materials
+# Materials
 
 <img src="/assets/voron0.png" width="200" />{: .float-left}{: .mr-3}
 
@@ -40,9 +38,7 @@ I chose to print all of my parts in ABS. ABS is one of the recommended materials
 
 Specifically, I used *Sunlu Black ABS* and *Inland Black ABS* for the main parts and *Fusion Filaments Seismic Red ABS 1.5* for the accent parts. I also picked up a spool of *eSun Black ABS+*. Allegedly ABS+ is a bit easier to print with and I will be using it to print the large electronics panels on my Ender. 
 
-<br>
-
-## Print Settings
+# Print Settings
 
 I made some slight modifications to the suggested print settings. Below is a comparison of the E3NG settings and mine:
 
@@ -65,7 +61,7 @@ For reference, the below 3MF files include the printer, filament, and process se
 * [Voron 0.2 Main Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Main_Parts-Voron.3mf)
 * [Voron 0.2 Accent Part Project File](https://github.com/TonySac/Ender3NG-Build/blob/main/Orca/E3NG_Accent_Parts-Voron.3mf)
 
-### Printing ABS on the Ender
+## Printing ABS on the Ender
 
 For the parts unable to fit in the Voron 0.2, I used my Ender 3 Neo.
 
@@ -90,7 +86,7 @@ Once again, I included the 3MF files for the parts printed on my Ender 3.
 I managed to print these parts without an enclosure using *Fusion Filaments Seismic Red ABS* for the stepper motor covers and *eSun Black ABS+* for the electronics panels. I used a brim and hairspray to assist with bed adhesion. The stepper covers had some mild warping but I do not foresee any issues. The electronics panels printed great, other than not noticing the the E3NG logo inlay :frowning_face:. I guess I'll add those to my reprinting list.
 
 
-## Electronics Frame Rims (EF**)
+# Electronics Frame Rims (EF**)
 
 {: .mod }
 :wrench: The following covers a modification I made to an STL.

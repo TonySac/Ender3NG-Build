@@ -25,7 +25,7 @@ This build recycles most of the frame and electronics from the Ender 3. However 
 
 As of this writing, there are no official parts kits (printed or otherwise). All of the required parts, STLs, and sourcing recommendations are on [Printables](https://www.printables.com/model/469280-ender-3-ng-corexy-beta).
 
-## Tools and Consumables
+# Tools and Consumables
 
 Depending on your tool collection and how in depth this build goes, some additional things will be nice to have on hand that may have not been specified in the BOM.
 
@@ -52,7 +52,7 @@ The same goes for these consumables:
 
 Fortunately, I had most of these things left over from previous projects.
 
-## Cost Breakdown
+# Cost Breakdown
 
 I put together a small breakdown to help me keep track of costs and help justify expenses. I mean if I already owned the part... it was technically free, right?
 
