@@ -1,5 +1,5 @@
 ---
-title: Mechanical Assembly
+title: "Mechanical Assembly :building_construction:"
 layout: default
 nav_order: 5
 has_children: true

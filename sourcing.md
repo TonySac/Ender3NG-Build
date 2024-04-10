@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 has_children: true
 posted: 2024-03-19
-updated: 2024-04-06
+updated: 2024-04-07
 ---
 
 # Sourcing Parts
@@ -39,16 +39,16 @@ So far, I have made use of the following tools:
 * Deburring tool & pick set
 * Lighter/heat gun
 * Soldering iron
-* Drill & tap set
+* Drill and bits
 
 The same goes for these consumables:
 
 * Grease (Mobilux EP2)
-* Blue Loctite
 * CA (super) glue
 * Zip ties
 * Heat shrink
 * Isopropyl alcohol
+* Cutting oil 
 
 Fortunately, I had most of these things left over from previous projects.
 

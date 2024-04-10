@@ -4,7 +4,7 @@ layout: default
 nav_order: 3
 has_children: true
 posted: 2024-03-19
-updated: 2024-04-06
+updated: 2024-04-10
 ---
 
 # Preparing Parts
@@ -45,6 +45,13 @@ Once most parts were printed, I went page by page in the build manual and sunk t
 {: .tip }
 :bulb: Use a flat metal surface to push against the insert after it is in place to help it set level and flush to the plastic part.
 
+# Electronics Frame Rims (EF**)
+
+The `electronics frame rims` or `EF__` parts needed to be glued together with `EFJ` for final assembly. I took a second to use some super glue and complete this process after I placed the heat inserts. Once again, this made sure these parts were ready to go when I get to this phase of mechanical assembly. 
+
+{: .mod }
+:wrench: I split some of the longer rims so they could be printed on my Voron 0.2. This also meant printing additional `EFJs` and an additional glue joint. I'm considering not using the glue joints on final assembly as each rim has a dedicated mount hole. See [here for more information](/sourcing-printing.html#electronics-frame-rims-ef__).
+
 # Lubricating Bearings
 
 <img src="/assets/bearing-pack.png" width="200" />{: .float-right}{: .ml-3} 
@@ -59,3 +66,9 @@ I also batch lubed all of my linear bearings so they would be ready to go when I
     Using a clean linear rod, I plugged the open end of the bearing as I slid it on the rod. This pushes as much grease as possible into the bearing races. Move the bearing up and down the rod to work as much grease as possible into the races.
 1. **Storage --**
     Once lubricated, I wiped up any excess grease leaving just a thin layer on the outside of the bearing for protection. I cleaned up the linear rod and placed the bearings back in a bag for storage to keep them free of any debris.
+
+# Extrusions
+
+I went with the 2040 extrusion mod. 350mm to be exact. I needed to tap one hole on the bottom of each extrusion to fit an M5 screw for the rubber feet. The appropriate way would be to use a tap set and thread the ends. 
+
+I was lazy and used a little 3 in 1 oil and an old M5 screw. The aluminum is soft enough I could cut 1/2 to 1 full turn before backing out to clear the threads. Take it slow if you go this route.

@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 parent: Sourcing Parts
 posted: 2024-03-19
-updated: 2024-04-06
+updated: 2024-04-10
 ---
 
 # Printing Parts
@@ -86,15 +86,15 @@ Once again, I included the 3MF files for the parts printed on my Ender 3.
 I managed to print these parts without an enclosure using *Fusion Filaments Seismic Red ABS* for the stepper motor covers and *eSun Black ABS+* for the electronics panels. I used a brim and hairspray to assist with bed adhesion. The stepper covers had some mild warping but I do not foresee any issues. The electronics panels printed great, other than not noticing the the E3NG logo inlay :frowning_face:. I guess I'll add those to my reprinting list.
 
 
-# Electronics Frame Rims (EF**)
+# Electronics Frame Rims (EF__)
 
 {: .mod }
 :wrench: The following covers a modification I made to an STL.
 
 <img src="/assets/EF__ugly.png" width="300" />{: .float-right}{: .ml-3}
 
-I initially printed the **Electronics Frame Rims** on the Ender 3 with *eSun ABS+* and they came out with terrible warps and tolerance issues. 
+I initially printed the `electronics frame rims` on the Ender 3 with *eSun ABS+* and they came out with terrible warps and tolerance issues. 
 
-After reviewing the build manual and STEP file, I noticed these parts are already two pieces that are glued together using the **Frame Joint (EFJ)**. I decided I should be able to split the parts between the mounting holes and reconnect them using additional **Frame Joints**. I printed off some extra **Frame Joints** and split the rims in OrcaSlicer. The parts printed without issues on my Voron and seemed to mate just fine.
+After reviewing the build manual and STEP file, I noticed these parts are already two pieces that are glued together using the `Frame Joint (EFJ)`. I decided I should be able to split the parts between the mounting holes and reconnect them using additional `EFJs`. I printed off some extra `EFJs` and split the rims in OrcaSlicer. The parts printed without issues on my Voron and seemed to mate just fine.
 
 <img src="/assets/EF__split.png"/>{: .ml-3}
