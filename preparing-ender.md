@@ -2,6 +2,7 @@
 title: "Ender 3 Prep"
 layout: default
 parent: Preparing Parts
+posted: 2024-04-09
 ---
 
 # The *Ender* of an Era
