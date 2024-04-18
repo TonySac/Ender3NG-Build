@@ -3,6 +3,7 @@ title: "Mechanical Assembly"
 layout: default
 nav_order: 5
 posted: 2024-04-10
+updated: 2024-04-17
 ---
 
 # Mechanical Assembly
@@ -76,13 +77,13 @@ My build uses the 1040mm Z belt and needed `BZA_1040`. Its essentially a combina
 
 <img src="/assets/z_pulley.png" width="300">{: .float-right}{: .ml-3}
 
-At this point, the bottom frame has been assembled with each corner bracket. The rear Z support still needs to be attached, leadscrews inserted, and belt tensioned. I attached `BZA` to the rear extrusion using the T nuts. I bolted the Z tensioner to the right extrusion. While the Z belt was still loose, I inserted each of the 3 three lead screws. When installing the lead screws, make sure they goes through both 608 bearings but not so far that it hits the surface below. Secure the lead screws using the grub screws on the 3 Z pulleys. The Z motor pulley may need to be adjusted so it is level with the screw pulleys. I waited until the mounting the bed before I tensioned and secured the Z belt to each pulley.
+At this point, the bottom frame has been assembled with each corner bracket. The rear Z support still needs to be attached, leadscrews inserted, and belt tensioned. I attached `BZA` to the rear extrusion using the T nuts. I bolted the Z tensioner to the right extrusion. While the Z belt was still loose, I inserted each of the 3 three lead screws. When installing the lead screws, make sure they go through both 608 bearings but not so far that it hits the surface below. Secure the lead screws using the grub screws on the 3 Z pulleys. The Z motor pulley may need to be adjusted so it is level with the screw pulleys. I waited until the mounting the bed before I tensioned and secured the Z belt to each pulley.
 
 Finally, I went ahead and slid the vertical 350mm 2040 extrusions in place and secured them with T nuts. I also placed the rear rubber feet into holes I tapped on the bottom of these extrusions.
 
 # Bed Assembly
 
-I assembled the bed using the stock plate option. Use care when tightening the screws that hold the LM12UU bearings. `ZCL` is easy to crack. I reused the lead screw nut from the Ender 3. It was not an exact match to the mounting patter on the printed arms. As a result, I needed use some M2 bolts and a nut to secure it.
+I assembled the bed using the stock plate option. Use care when tightening the screws that hold the LM12UU bearings. `ZCL` is easy to crack. I reused the lead screw nut from the Ender 3. It was not an exact match to the mounting patter on the printed arms. As a result, I needed use some M2 bolts and a nut to secure it. I will be replacing this particular nut.
 
 ## Mounting the Bed Assembly
 
@@ -115,7 +116,7 @@ I also added the top `FCB2` and bottom `FCB1` frame corner braces at this time.
 
 # AB Belt Routing
 
-I routed the A/B belts prior to installing electronics. Part because it gave me more room and part because I was waiting on some hardware. Follow the steps in the build manual with a few very important caveats.
+I routed the A/B belts prior to installing the electronics panels. Partly because it gave me more room and partly because I was waiting on some hardware. Follow the steps in the build manual with a few very important caveats.
 
 1. Make sure to leave plenty of excess at each end of the belt. About 5cm is probably a good number.
 2. Don't miss the idler that is hidden behind the A/B motors. Its not really visible on from the outside and hard to see on the drawings. Refer back to the A/B Mount building instructions to see it clearly.
@@ -123,14 +124,12 @@ I routed the A/B belts prior to installing electronics. Part because it gave me 
 
 # Electronics Panels
 
-Not much to add here. The 2040 mod requires the use of additional T nuts to mount the panels and a shorter DIN rail. Down the road I will consider adding LEDs.
+Not much to add here. The 2040 mod requires the use of additional T nuts to mount the panels and a shorter DIN rail. I screwed the DIN rails directly to the electronics panels. I would like to find a way to better secure the lower, longer DIN rail as it seems to put a lot of stress on these panels.
 
 # Extras
 
 STLs for a spool holder and handles are included in the release files. I will be adding those once I am further along in the build. I feel as if they will be in the way during the wiring phase.
 
-Consider mounting the toolhead if you haven't already.
-
 # Completion
 
-Give the build a final inspection. Check for cracks or damaged parts. Make sure the joints and mounts are secure. Check that their is still no binding and each axis has a full range of motion. Now is the easiest time to address any issues or replace any parts.
+Give the build a final inspection. Check for cracks or damaged parts. Make sure the joints and mounts are secure. Check that their is still no binding and each axis has a full range of motion. Now is the easiest time to address any issues or replace any parts. I also took this opportunity to mount the toolhead.
