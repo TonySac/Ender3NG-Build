@@ -31,44 +31,28 @@ CANbus is communication protocol that only uses 2 wires. Most commonly in 3D pri
 
 This is considered an advanced configuration. It is worth noting the EBB36 can be connected in USB mode and does not require the use of CANbus. Additionally, other boards are available and there are some other ways to run CANbus on a 3D printer. This covers using a BTT SKR Mini E3 V3 as a USB to CAN bridge along with a cheap CAN transceiver to communicate with the EBB36. Klipper then connects to all of these devices using CAN rather than USB.
 
-{: .note }
-:pencil: Special thanks to [Esoterical's CANBUS Guide](https://canbus.esoterical.online) and [Zippy's CANBus Your Pico](https://github.com/rootiest/zippy_guides/blob/main/guides/pico_can.md).
+> Special thanks to [Esoterical's CANBUS Guide](https://canbus.esoterical.online) and [Zippy's CANBus Your Pico](https://github.com/rootiest/zippy_guides/blob/main/guides/pico_can.md).
 
 # Build the CAN Network
 
-The newest Raspberry Pi OS is based on Debian 12 and uses netplan to configure networks. Set up a CANbus network with:
+For Raspberry Pi OS set up the CAN interface with:
 
 ```console
-sudo nano /etc/systemd/network/25-can.network
+sudo nano /etc/network/interfaces.d/can0
 ```
 
-and populate it with the following block:
+Then populate the file with the following block:
 
 ```yaml
-[Match]
-Name=can*
-
-[CAN]
-BitRate=1M
+allow-hotplug can0
+iface can0 can static
+  bitrate 1000000
+  up ip link set can0 txqueuelen 1024
 ```
 
-This sets up the CAN network with a bit rate of 1,000,000 as recommended in the Klipper docs. Next, the transmit queue length needs to be set. The Klipper docs reccomended 128. Other guides recommended higher. I found 1024 works well. Create another file in `/etc/systemd/network`:
+This sets up the CAN network with a bit rate of 1,000,000 as recommended in the Klipper docs and a transmit queue length of 1024. The Klipper docs recommended 128. Other guides recommended higher. I found 1024 works well.
 
-```console
-sudo nano /etc/systemd/network/10-can.link
-```
-
-This time add the following data:
-
-```yaml
-[Match]
-Type=can
-
-[Link]
-TransmitQueueLength=1024
-```
-
-Once these files are created and saved, reboot the Pi.
+Once these are saved, reboot the Pi.
 
 # Flash the BTT SKR Mini E3 V3
 
@@ -83,7 +67,7 @@ sudo apt install python3 python3-pip python3-can
 
 ## Build & Flash Katapult
 
-I elected to install [Katapult](https://github.com/Arksine/katapult) on the SKR. This allows the CANbus network to be used to flash Klipper firmware. Normally, the SKR Mini E3 V3 must be flashed directly from the SD card slot. Katapult replaces the default bootloader to make this possible. However Katapult is not mandatory for CANbus. Skip ahead to [building and flashing Klipper](//software_install-CANBUS.html#build--flash-klipper).
+I elected to install [Katapult](https://github.com/Arksine/katapult) on the SKR. This allows the CANbus network to be used to flash Klipper firmware. Normally, the SKR Mini E3 V3 must be flashed directly from the SD card slot. Katapult replaces the default bootloader to make this possible. However Katapult is not mandatory for CANbus. Skip ahead to [building and flashing Klipper](/software_install-CANBUS.html#build--flash-klipper).
 
 {: .warn }
 :warning: Overwriting the bootloader on the SKR Mini E3 V3 has the potential to brick the mainboard if done incorrectly. Proceed with caution.
@@ -121,7 +105,7 @@ The bootloader must be installed from the SD card slot. Copy `deployer.bin` to a
 :bulb: Copy the firmware with whatever method works best. I've used SCP, SFTP, Samba, and a direct mount in the past.
 
 {: .note }
-:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware in the past. The cheap 8GB card that came with my Ender always works fine though.
+:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware. The cheap 8GB card that came with my Ender always works fine though.
 
 Power off the printer mainboard, insert the firmware SD card, and power on the mainbaord. Wait several moments for the new bootloader to flash.
 
@@ -155,17 +139,11 @@ make clean
 make
 ```
 
-This will generate the firmware as a `klipper.bin` file in under the standard path of `~/klipper/out/klipper.bin`
+This will generate the firmware as a `klipper.bin` file in under the standard path of `~/klipper/out/klipper.bin`. It is now ready to be flashed [with Katapult](//software_install-CANBUS.html#flash-with-katapult) or [without Katapult](/software_install-CANBUS.html#flash-without-katapult).
 
 ### Flash without Katapult
 
 If not using Katapult, the new firmware must be flashed via SD card. Copy `klipper.bin` to a MicroSD card that has been formatted to FAT32. Rename `klipper.bin` to `firmware.bin`.
-
-{: .tip }
-:bulb: Copy the firmware with whatever method works best. I've used SCP, SFTP, Samba, and a direct mount in the past.
-
-{: .note }
-:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware in the past. The cheap 8GB card that came with my Ender always works fine though.
 
 Power off the printer mainboard, insert the firmware SD card, and power on the mainbaord. Wait several moments for the firmware to flash.
 
@@ -187,7 +165,7 @@ python3 flashtool.py -d /dev/serial/by-id/usb-katapult_stm36g0b1_########-####
 ```
 
 {: .tip }
-:bulb: Make sure to use the correct `/dev/serial/by-id/` path for the mainboard.
+:bulb: Make sure to use the correct `/dev/serial/by-id/` path for the Katapult mainboard as found when it was [previously flashed](/software_install-CANBUS.html#build--flash-katapult).
 
 ## Connect via CAN
 
@@ -207,7 +185,7 @@ The CANbus query tool will discover the CANbus UUID of the mainboard.
 ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
 ```
 
-This UUID will be used in the `printer.cfg` file to tell Klipper to use CAN for communication. Remove the `serial` line and add the `canbus_uuid`.
+This UUID will be used in the `printer.cfg` file to tell Klipper to use CAN for communication. Remove the `serial` line and add the `canbus_uuid` as it corresponds to your machine.
 
 ```diff
 [mcu]

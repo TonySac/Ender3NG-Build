@@ -20,7 +20,7 @@ posted: 2024-04-15
 
 ---
 
-I already use Klipper with Mainsail on my current printers so it was a natural choice for this project. My installation is running on a [Raspberry Pi 3A+](https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/). As I prefer to start with a bare bones system and cherry pick what I need, I flashed Raspberry Pi OS Lite then used [KIAUH](https://github.com/dw-0/kiauh) for a "manual" install.
+I already use Klipper with Mainsail on my current printers so it was a natural choice for this project. My installation is running on a Raspberry Pi. Since I prefer to start with a bare bones system and cherry pick what I need, I flashed Raspberry Pi OS Lite then used [KIAUH](https://github.com/dw-0/kiauh) for a "manual" install.
 
 {: .tip }
 :bulb: I have a tutorial for [Baking a Raspberry Pi](https://themakermedic.com/posts/Pi-Baking_a_Pi/) in my other blog.
@@ -36,7 +36,7 @@ The first step is to get a Klipper host up and running. As previously mentioned,
 
 The Raspberry Pi can also be used as a secondary MCU. This means the GPIO pins on the the Pi can be accessed and controlled by Klipper. Since we're already in the Pi, might as well set that up now.
 
-Open the Klipper directory and start the MCU process before Klipper:
+Open the Klipper directory and set the MCU process to start before Klipper:
 
 ```console
 cd ~/klipper/
@@ -59,6 +59,9 @@ sudo service klipper start
 ## Sonar
 
 I also run [Sonar](https://github.com/mainsail-crew/sonar) on my build. Its a WiFi keepalive daemon and occasionally my Pi likes to drop connections. They also provide a straight forward install script.
+
+{: .tip }
+:bulb: I also found running the Pi on a 2.4 GHz only WiFi and with IPv6 disabled seems to be more stable.
 
 # Mainboard (BTT SKR Mini E3 V3)
 
@@ -93,9 +96,9 @@ The SKR Mini E3 V3 requires the firmware be flashed via SD card. Copy `klipper.b
 :bulb: Copy the firmware with whatever method works best. I've used SCP, SFTP, Samba, and a direct mount in the past.
 
 {: .note }
-:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware in the past. The cheap 8GB card that came with my Ender always works fine though.
+:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware. The cheap 8GB card that came with my Ender always works fine though.
 
-Power off the printer mainboard, insert the firmware SD card, and power on the mainbaord. Wait several minutes for the firmware to flash.
+Power off the printer mainboard, insert the firmware SD card, and power on the mainbaord. Wait several moments for the firmware to flash.
 
 A successful flash can be confirmed in two ways.
 
