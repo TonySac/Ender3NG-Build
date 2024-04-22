@@ -36,6 +36,8 @@ The large power supply only fit on the lower DIN rail. I was unsuccessful using 
 
 The upper DIN rail is home to the Raspberry Pi, mainboard, and a CAN transceiver.  I used the DIN clips and brackets from my Voron build, simply because they were already printed and on hand.
 
+For the time being, I do not have an enclosure on the rear of the printer. I would like to clean up the wiring and either print or cut a nice panel to cover the back.
+
 # Toolhead Electronics
 
 As previously stated, I'm running a Voron Stealthburner for the toolhead. In addition to the usual components (fans, thermistor, and heater) it has LEDs. I'm also reusing the CR Touch from the Ender 3 and running a BTT EBB36 board. Eventually I will upgrade to a newer bed probe and maybe even change the toolhead. 
