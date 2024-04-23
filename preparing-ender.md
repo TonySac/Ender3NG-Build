@@ -3,6 +3,7 @@ title: "Ender 3 Prep"
 layout: default
 parent: Preparing Parts
 posted: 2024-04-09
+updated: 2024-04-22
 ---
 
 # The *Ender* of an Era
@@ -35,10 +36,10 @@ The old X axis is a 345mm 2020 extrusion. This was the only one on my printer wi
 
 # Z Screw
 
-{: .note }
-:pencil: If I do this again, I will just buy 3 leadscrews.
+I reused the Z screw from the Ender. This required cutting it down to the appropriate length. 300mm is specified in the BOM. I simply lined it up with one of the 300mm leadscrews I purchased and cut it with a hacksaw. The next appropriate step would be to bevel the edge. Instead, I hid it on the bottom side of the printer. Regardless, make sure to clean the leadscrew after cutting it then thread a nut on/off the cut end several times to help clean it up.
 
-I reused the Z screw from the Ender. This required cutting it down to the appropriate length. 300mm is specified in the BOM. I simply lined it up with one of the 300mm leadscrews I purchased and cut it with a hacksaw. The next appropriate step would be to bevel the edge. I just hid it on the bottom side of the printer. Regardless, make sure to clean the leadscrew after cutting it then thread a nut on/off the cut end several times to help clean it up.
+{: .tip }
+:bulb: The stock Ender 3 leadscrew nut was not a perfect fit for the E3NG upgrade. If reusing the leadscrew, consider still purchasing a new leadscrew nut.
 
 <img src="/assets/stock_bed.png" width="250" />{: .float-right}{: .ml-3}
 

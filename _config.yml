@@ -25,3 +25,5 @@ callouts:
     color: pink
   warn:
     color: red
+  notice:
+    color: yellow

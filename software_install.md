@@ -4,6 +4,7 @@ layout: default
 nav_order: 7
 has_children: true
 posted: 2024-04-15
+updated: 2024-04-22
 ---
 
 # Software Installation
@@ -30,7 +31,7 @@ Since so much information already exists between the [KIAUH](https://github.com/
 
 # Klipper Host
 
-The first step is to get a Klipper host up and running. As previously mentioned, I'm using a Raspberry Pi 3A+ with a bare bones install of Raspberry Pi OS Lite. Using [KIAUH](https://github.com/dw-0/kiauh), I installed Klipper, Moonraker, and Mainsail. Klipper and Moonraker are mandatory but the frontend, in my case Mainsail, can be different. KIAUH also includes some other software that can be installed at this time if desired. These installations can also be done manually by referencing the individual documentations.
+The first step is to get a Klipper host up and running. I'm running a bare bones install of Raspberry Pi OS Lite on a Raspberry Pi. Using [KIAUH](https://github.com/dw-0/kiauh), I installed Klipper, Moonraker, and Mainsail. Klipper and Moonraker are mandatory but the frontend, in my case Mainsail, can be different. KIAUH also includes some other software that can be installed at this time if desired. These installations can also be done manually by referencing the individual documentations.
 
 ## RPi as an MCU
 
@@ -95,8 +96,7 @@ The SKR Mini E3 V3 requires the firmware be flashed via SD card. Copy `klipper.b
 {: .tip }
 :bulb: Copy the firmware with whatever method works best. I've used SCP, SFTP, Samba, and a direct mount in the past.
 
-{: .note }
-:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware. The cheap 8GB card that came with my Ender always works fine though.
+>I've had issues with 32GB Samsung MicroSD cards flashing the firmware. The cheap 8GB card that came with my Ender always works fine though.
 
 Power off the printer mainboard, insert the firmware SD card, and power on the mainbaord. Wait several moments for the firmware to flash.
 
@@ -112,5 +112,10 @@ An output similar to `usb-Klipper-stm32g0b1xx_#####################-####` should
 
 2. Insert the SD card back into a computer and the `firmware.bin` file should have automatically changed to `firmware.cur`
 
+Use the `ls /dev/serial/by-id` output in the `printer.cfg` file to tell Klipper where it can find the control board.
 
+```console
+[mcu]
+serial: /usb-Klipper-stm32g0b1xx_#####################-####
+```
 With Klipper installed on the Pi and flashed to the mainboard. Its time to start the [configuration](/software_configuration.html).

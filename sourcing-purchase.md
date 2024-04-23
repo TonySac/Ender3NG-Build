@@ -4,7 +4,7 @@ layout: default
 nav_order: 1
 parent: Sourcing Parts
 posted: 2024-03-19
-updated: 2024-04-06
+updated: 2024-04-22
 ---
 
 # Purchasing and Ordering Parts
@@ -21,13 +21,12 @@ updated: 2024-04-06
 
 ---
 
-After raiding my spare parts, I turned to the BOM and sourcing guide to acquire anything that was missing or I wanted to add.
+After raiding my spare parts drawer, I turned to the BOM and sourcing guide to acquire anything that was missing or I wanted to add.
 
-{: .note }
-:pencil: The BOM not only contains the recommended parts but also affiliate links that help support the project. Consider souring parts directly from the BOM.
+>The BOM not only contains the recommended parts but also affiliate links. I suggest using these links when purchasing parts in order to help support the project.
 
 {: .tip }
-:bulb: Think about the lead times when ordering parts and plan the build accordingly.
+:bulb: Consider lead times when ordering parts and plan the build accordingly.
 
 # Motion
 
@@ -40,11 +39,11 @@ I sourced most of this exactly as specified in the BOM from Aliexpress using the
 
 I already have a BTT SKR Mini E3 V3 in my Ender 3. I added the extended screen cable to my order as I prefer the basic LCD over a touchscreen. I also picked up some DIN rails off Aliexpress. Originally, I considered using the printed DIN cleats from the Voron 0 repo but decided to go with actual rails. I even grabbed an extra to upgrade the Voron.
 
-{: .note }
-:pencil: No wiring information is included in the offical docs. I had plenty of 16-22 AWG wire and various connectors (JST, Molex, ferrules, etc.) in my spare parts for any needs.
-
 {: .mod }
-:wrench: I plan to use CANBus with a BTT EBB36 CANBus tool head board. I have one in the Voron 0.2 and enjoyed the process of setting it up along with the simplified wiring.
+:wrench: I plan to use CANbus with a BTT EBB36 CANbus tool head board. I have one in the Voron 0.2 and enjoyed the process of setting it up along with the simplified wiring.
+
+{: .notice }
+:loudspeaker: No wiring information is included in the official docs. I had plenty of 16-22 AWG wire and various connectors (JST, Molex, ferrules, etc.) in my spare parts for any needs.
 
 # Hotend
 

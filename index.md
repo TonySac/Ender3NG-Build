@@ -3,19 +3,19 @@ title: Overview
 layout: default
 nav_order: 1
 posted: 2024-03-16
-updated: 2024-04-06
+updated: 2024-04-22
 ---
 
 # The Maker Medic's Ender 3 NG
 
 ---
 
-This documentation logs my Ender 3 NG build. It serves as a log of my process and in parts an unofficial guide. I did not build this E3NG exactly to spec. It will likely become a project printer that I continue to tinker with. I plan to continue to update these pages as things change and progress. I started the build process in March 2024 when the project was still in beta release.
+This documentation logs my Ender 3 NG build. It serves as a log of my process and in some parts an unofficial guide. I did not build this E3NG exactly to spec. It will likely become a project printer that I continue to tinker with. I plan to continue to update these pages as things change and progress. I started the project in March 2024 during a in beta release.
 
 I've attempted to call out things I found along the build journey using the following highlights:
 
 {: .note}
-:pencil: Notes
+:pencil2: General Notes
 
 {: .tip}
 :bulb: Tips/Tricks 
@@ -23,8 +23,15 @@ I've attempted to call out things I found along the build journey using the foll
 {: .mod }
 :wrench: Modifications
 
+{: .notice}
+:loudspeaker: Notices/Alerts
+
 {: .warn }
 :warning: Warnings
+
+## Timeline
+
+As of mid April 2024, I was successfully printing on the E3NG. I spent the month of March intermittently printing parts on my Voron 0.2 and the donor Ender 3. Mechanical assembly took roughly 1.5 days and wiring up electronics took another half to full day. Outside of printing and sourcing parts, it took me about 2-3 days to go from boxes of parts to a functional printer.
 
 ## Background
 

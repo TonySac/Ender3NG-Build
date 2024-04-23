@@ -4,7 +4,7 @@ layout: default
 nav_order: 3
 has_children: true
 posted: 2024-03-19
-updated: 2024-04-10
+updated: 2024-04-22
 ---
 
 # Preparing Parts
@@ -34,9 +34,7 @@ As the parts came off the printer, I inspected them for quality. I already confi
 :warning: Be careful with sharp tools and heat sources.
 
 I used a deburring tool and a small pick to remove brims and clean up the edges. I also ran a lighter along the parts to remove discoloration and further smooth things out.
-
-{: .note }
-:pencil: A heat gun would probably be a better choice.
+>A heat gun would probably be a better choice.
 
 # Heat Inserts
 
@@ -45,7 +43,7 @@ Once most parts were printed, I went page by page in the build manual and sunk t
 {: .tip }
 :bulb: Use a flat metal surface to push against the insert after it is in place to help it set level and flush to the plastic part.
 
-# Electronics Frame Rims (EF**)
+# Electronics Frame Rims (EF__)
 
 The `electronics frame rims` or `EF__` parts needed to be glued together with `EFJ` for final assembly. I took a second to use some super glue and complete this process after I placed the heat inserts. Once again, this made sure these parts were ready to go when I get to this phase of mechanical assembly. 
 
@@ -69,6 +67,6 @@ I also batch lubed all of my linear bearings so they would be ready to go when I
 
 # Extrusions
 
-I went with the 2040 extrusion mod. 350mm to be exact. I needed to tap one hole on the bottom of each extrusion to fit an M5 screw for the rubber feet. The appropriate way would be to use a tap set and thread the ends. 
+I went with the 2040 extrusion mod, 350mm to be exact. I needed to tap one hole on the bottom of each extrusion to fit an M5 screw for the rubber feet. The appropriate way would be to use a tap set and thread the ends. 
 
 I was lazy and used a little 3 in 1 oil and an old M5 screw. The aluminum is soft enough I could cut 1/2 to 1 full turn before backing out to clear the threads. Take it slow if you go this route.

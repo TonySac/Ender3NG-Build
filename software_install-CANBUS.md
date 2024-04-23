@@ -21,16 +21,19 @@ updated: 2024-04-22
 
 ---
 
+{: .notice }
+:loudspeaker: This is considered an advance configuration and assumes some underlying knowledge of Linux/Raspberry Pi OS and Klipper.
+
 > Special thanks to [Esoterical's CANBUS Guide](https://canbus.esoterical.online) and [Zippy's CANBus Your Pico](https://github.com/rootiest/zippy_guides/blob/main/guides/pico_can.md).
 
 <img src="/assets/ebb36.png" width="200" />{: .float-right}{: .ml-3}
 
 CANbus is communication protocol that only uses 2 wires. Most commonly in 3D printers it is used to connect a second MCU, often a toolhead board, to the main controller. This is exactly the use case I have set up. I am running a [BTT EBB36](https://github.com/bigtreetech/EBB) mounted on my toolhead. All of the toolhead electronics (hotend, thermistor, fans, LEDs, extruder motor, bed probe, etc.) are connected to that board. The board is then connected to my main MCU using 2 wires and a CAN transceiver. The board does also require 2 wires for power. So now all of my toolhead electronics and managed using only 4 wires back to my electronics case.
 
-This is considered an advanced configuration. It is worth noting the EBB36 can be connected in USB mode and does not require the use of CANbus. Additionally, other boards are available and there are some other ways to run CANbus on a 3D printer. This covers using a BTT SKR Mini E3 V3 as a USB to CAN bridge along with a cheap CAN transceiver to communicate with the EBB36. Klipper then connects to all of these devices using CAN rather than USB.
+> It is worth noting the EBB36 can be connected in USB mode and does not require the use of CANbus. Additionally, other boards are available and there are some other ways to run CANbus on a 3D printer. This covers using a BTT SKR Mini E3 V3 as a USB to CAN bridge along with a cheap CAN transceiver to communicate with the EBB36. Klipper then connects to all of these devices using CAN rather than USB.
 
-{: .tip }
-:bulb: All of the CAN devices must be correctly wired and powered for this to work. See the section on [wiring](/electronics-wiring.html) for inspiration.
+{: .notice }
+:loudspeaker: All of the CAN devices must be correctly wired and powered for this to work. See the section on [electonics & wiring](/electronics.html) for inspiration.
 
 # Build the CAN Network
 
@@ -55,8 +58,8 @@ Once these are saved, reboot the Pi.
 
 # Flash the BTT SKR Mini E3 V3
 
-{: .note }
-:pencil: These steps are specific to the BTT SKR Mini E3 V3 mainboard. It will need to be adapted for any other device.
+{: .notice }
+:loudspeaker: These steps are specific to the BTT SKR Mini E3 v3 mainboard. It will need to be adapted for any other device.
 
 Make sure some python dependencies are installed on the Pi:
 
@@ -66,7 +69,7 @@ sudo apt install python3 python3-pip python3-can
 
 ## Build & Flash Katapult
 
-I elected to install [Katapult](https://github.com/Arksine/katapult) on the SKR. This allows the CANbus network to be used to flash Klipper firmware. Normally, the SKR Mini E3 V3 must be flashed directly from the SD card slot. Katapult replaces the default bootloader to make this possible. However Katapult is not mandatory for CANbus. Skip ahead to [building and flashing Klipper](/software_install-CANBUS.html#build--flash-klipper) to manually flash firmware without Katapult.
+I elected to install [Katapult](https://github.com/Arksine/katapult) on the SKR. This allows the CANbus network to be used to flash Klipper firmware. Normally, the SKR Mini E3 v3 must be flashed directly from the SD card slot. Katapult replaces the default bootloader to make this possible. However Katapult is not mandatory for CANbus. Skip ahead to [building and flashing Klipper](/software_install-CANBUS.html#build--flash-klipper) to manually flash firmware without Katapult.
 
 {: .warn }
 :warning: Overwriting the bootloader on the SKR Mini E3 V3 has the potential to brick the mainboard if done incorrectly. Proceed with caution.
@@ -100,15 +103,9 @@ The new bootloader will have been generated as `deployer.bin` under the path `~/
 
 The bootloader must be installed from the SD card slot. Copy `deployer.bin` to a MicroSD card that has been formatted to FAT32. Rename `deployer.bin` to `firmware.bin`.
 
-{: .tip }
-:bulb: Copy the firmware with whatever method works best. I've used SCP, SFTP, Samba, and a direct mount in the past.
-
-{: .note }
-:pencil: I've had issues with 32GB Samsung MicroSD cards flashing the firmware. The cheap 8GB card that came with my Ender always works fine though.
-
 Power off the printer mainboard, insert the firmware SD card, and power on the mainbaord. Wait several moments for the new bootloader to flash.
 
-Assuming it was all done in accordance with the above screenshot, the status LED should start to slowly blink indicating "Katapult mode".
+Assuming it was all done in accordance with the above screenshot, the status LED should start to slowly blink indicating Katapult mode.
 
 Additionally, running `ls /dev/serial/by-id` should show a Katapult device connected via USB.
 
@@ -120,14 +117,14 @@ Make note of the above device name as it will be needed to flash Klipper later.
 
 ## Build & Flash Klipper
 
-Klipper needs to be built for the SKR Mini E3 V3 to communicate via CANbus. Open the Klipper configuration tool.
+Klipper needs to be built for the SKR Mini E3 v3 to communicate via CANbus. Open the Klipper configuration tool.
 
 ```console
 cd ~/klipper
 make menuconfig
 ```
 
-Build the configuration for the BTT SKR Mini E3 V3 to communicate via `USB to CAN`. Make sure the bootloader offset is agrees with the Katapult install. Select a CANbus interface, `PB8/PB9` are pins easily accessible on the EXP1 header. Finally make sure the bit rate is the same as the previously configured CAN network. Once again, I have attached a screenshot of my configuration for a BTT SKR Mini E3 V3 for CANbus in bridge mode with Katapult.
+Build the configuration for the BTT SKR Mini E3 v3 to communicate via `USB to CAN`. Make sure the bootloader offset is agrees with the Katapult install. Select a CANbus interface, `PB8/PB9` are pins easily accessible on the EXP1 header. Finally make sure the bit rate is the same as the previously configured CAN network. Once again, I have attached a screenshot of my configuration for a BTT SKR Mini E3 v3 for CANbus in bridge mode with Katapult.
 
 <img src='/assets/skr_klipper-can.png'>
 
@@ -138,7 +135,7 @@ make clean
 make
 ```
 
-This will generate the firmware as a `klipper.bin` file in under the standard path of `~/klipper/out/klipper.bin`. It is now ready to be flashed [with Katapult](//software_install-CANBUS.html#flash-with-katapult) or [without Katapult](/software_install-CANBUS.html#flash-without-katapult).
+This will generate the firmware as a `klipper.bin` file in under the standard path of `~/klipper/out/klipper.bin`. It is now ready to be flashed [with Katapult](/software_install-CANBUS.html#flash-with-katapult) or [without Katapult](/software_install-CANBUS.html#flash-without-katapult).
 
 ### Flash without Katapult
 
@@ -148,7 +145,7 @@ Power off the printer mainboard, insert the firmware SD card, and power on the m
 
 ### Flashing with Katapult
 
-If Katapult is installed on the mainboard, the Klipper firmware can be flashed directly without the need for and SD card. 
+If Katapult is installed on the mainboard, the Klipper firmware can be flashed directly without the need for an SD card. 
 
 First stop the Klipper service.
 
@@ -168,7 +165,7 @@ python3 flashtool.py -d /dev/serial/by-id/usb-katapult_stm36g0b1_########-####
 
 ## Connect via CAN
 
-The CAN network should be running. Assuming the network is `can0`, This can be verified with:
+The CAN network should now be running. Assuming the network is `can0`, This can be verified with:
 
 ```console
 ip -s -d link show can0
@@ -192,14 +189,14 @@ This UUID will be used in the `printer.cfg` file to tell Klipper to use CAN for 
 + canbus_uuid: 027a9447a345
 ```
 
-Assuming everything went according to plan. The Mainsail interface should now be accessable without any `mcu` communication errors and via CANbus.
+Assuming everything went according to plan. The Mainsail interface should now be accessible without any `mcu` communication errors and via CANbus.
 
 # Flash the BTT EBB36 Toolhead Board
 
-The whole reason I set this up it to use the EBB36 via CANbus. Now that needs to be flashed with Klipper and setup as an additional MCU with CANbus communications.
+The whole reason I set this up it to use the EBB36 via CANbus. Now that board needs to be flashed with Klipper and setup as an additional MCU with CANbus communications.
 
-{: .note }
-:pencil: These steps outline how I setup my BTT EBB36 v1.2 board. They will vary between board models and versions. Adjust as needed.
+{: .notice }
+:loudspeaker: These steps outline how I setup my BTT EBB36 v1.2 board. They will vary between board models and versions. Adjust as needed.
 
 ## Build & Flash Katapult
 
@@ -226,7 +223,7 @@ Now the board needs to be powered and connected to the Raspberry Pi host via USB
 If the board has not yet been wired to a 24v power source, it can temporary be powered via USB by placing a jumper across the VUSB pins as shown below.
 
 {: .warn }
-:warning: Do not jump these pins if they board has a 24v power supply attached as it can result in damage to the components.
+:warning: Do not jump these pins if the board has a 24v power supply attached as it can result in damage to the components.
 
 <img src="/assets/ebb36_vusb.png" width="500"/>
 
@@ -319,4 +316,4 @@ Where the `canbus_uuid` is the UUID previously obtained from `~/klippy-env/bin/p
 
 # Configuration
 
-By now, the BTT SKR Mini E3 v3 and BTT EBB36 v1.2 should be communiating via CAN. The next section covers the [configuration of Klipper](/software_configuration.html) and other software, including the secondary MCU and CAN references.
+By now, the BTT SKR Mini E3 v3 and BTT EBB36 v1.2 should be communicating via CAN. The next section covers the [configuration of Klipper](/software_configuration.html) and other software, including the secondary MCU and CAN references.

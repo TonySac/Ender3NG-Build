@@ -1,12 +1,23 @@
 ---
-title: "Electronics"
+title: Electronics
 layout: default
 nav_order: 6
 has_children: true
 posted: 2024-04-17
+updated: 2024-04-22
 ---
 
 # Electronics
+{: .no_toc }
+
+<details closed markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ---
 
@@ -15,16 +26,33 @@ The official documentation does not include information on wiring or installing 
 In addition to the standard printer electronics (steppers, thermistors, & heaters) my build makes use of the following specific components:
 
 * BTT SKR Mini E3 V3 Mainboard
-* Raspberry Pi 3A+ :pencil:
+* Raspberry Pi 3A+
 * SN65HVD230 CAN Tranciver
 * BTT EBB36 CAN Toolhead Board
 * LEDs
 
-{: .mod }
-:wrench: I skipped the Klicky probe in favor for the CR Touch I already have on hand. I also did not install any endstops as I'm using sensorless homing.
-
 {: .note }
-:pencil: I upgraded to a Pi 4 that I had on hand. I ran into some bottlenecks with dev environments. The 3A should be fine for just a printer.
+:pencil2: I later upgraded to a Pi 4 that I had laying around. I ran into some bottlenecks with dev environments on the Pi 3A. The 3A should be fine for just a printer.
+
+# Wiring Guidance
+
+{: .warn }
+:warning: Incorrectly wiring components can cause damage and/or personal injury.
+
+Wires should be routed in a clean manner. This means out of the way of motion components and not pinched, kinked, or otherwise damaged. Always use the correct wire gauge. Securely crimp all connections and use electrical tape and/or heat shrink to prevent shorting. Standard color conventions are especially important for power wires. Label wires as needed.
+
+I provided a table below of the wire gauges I used for various components on the build. Remember, the bigger AWG number, the smaller the wire.
+
+| Component       | AWG   |
+|-----------------|-------|
+| AC Power        | 16-18 |
+| DC Power        | 18    |
+| Heaters         | 18-20 |
+| Thermistors     | 22    |
+| Fans            | 22    |
+| Steppers        | 22    |
+| Bed Probe       | 22-24 |
+| CANbus Comms.   | 22    |
 
 # Main Electronics
 
@@ -40,23 +68,26 @@ For the time being, I do not have an enclosure on the rear of the printer. I wou
 
 # Toolhead Electronics
 
-As previously stated, I'm running a Voron Stealthburner for the toolhead. In addition to the usual components (fans, thermistor, and heater) it has LEDs. I'm also reusing the CR Touch from the Ender 3 and running a BTT EBB36 board. Eventually I will upgrade to a newer bed probe and maybe even change the toolhead. 
+{: .mod }
+:wrench: Instead of Klicky, I'm reusing the CR Touch.
+
+As previously mentioned, I'm running a Voron Stealthburner for the toolhead. In addition to the usual components (fans, thermistor, and heater) it has some LEDs. I'm also running a BTT EBB36 toolhead board via CANbus. Eventually I will upgrade the CR Touch to a better bed probe and maybe even change the toolhead. 
 
 <img src="/assets/cr_mount.png" width="150">{: .float-right}{: .ml-3}
 
-I made some modification to the CR Touch hosuing and used [this](https://www.printables.com/model/709806-ender-3-ng-vocano-voron-bltouch-stealthburner) mount to attach the Stealthburner to my E3NG. The mount was originally designed for a BL Touch so I needed to shave down and remove some of the CR Touch housing. I also had to add some spacers to the mount.
+I made some modification to the CR Touch housing and used [this](https://www.printables.com/model/709806-ender-3-ng-vocano-voron-bltouch-stealthburner) mount to attach the Stealthburner to my E3NG. The mount was originally designed for a BL Touch so I needed to shave down and remove some of the CR Touch housing. I also had to add some spacers to the mount.
 
-{: .note }
-:pencil: A more elegant solution would be to redesign a mount that fits the probe correctly. With my currently subpar CAD skills and plans to upgrade the probe, I went with my modification instead. 
+>A more elegant solution would be to redesign a mount that fits the probe correctly. With my currently subpar CAD skills and plans to upgrade the probe, I went with my modification instead. 
 
-The big thing to remember with toolhead electronics is to route the wiring an a way that it does not jam up any motion components. The EBB36 CANbus toolhead board helps in this regard. I used one of the many EBB36 mounts found online for the Stealthburner/Clockwork2 then routed and secured any wires.
+The big thing to remember with toolhead electronics is to route the wiring an a way that it does not jam up any motion components. The EBB36 CANbus toolhead board helps in this regard. I used one of the many EBB36 mounts found online for the Stealthburner/Clockwork2 then routed and secured loose wires with zip ties.
 
 # Bed Electronics
 
-I reused the stock Ender 3 bed including heater and thermistor. This just required routing the existing cables. Future plans include adding some sort of quick disconnect, maybe WAGOs, to make the bed easier to remove and a cable chain.
+I reused the stock Ender 3 bed including heater and thermistor. This just required routing the existing cables. Future plans include adding some sort of quick disconnect, maybe WAGOs, to make the bed easier to remove along with a cable chain.
 
 # Switches and LEDs
 
-In lieu of limit switches, I used sensorless homing. 
+{: .mod }
+:wrench: I skipped the endstop switches in favor of sensorless homing.
 
 I'm still mapping out my plans for LEDs.

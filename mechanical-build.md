@@ -3,7 +3,7 @@ title: "Mechanical Assembly"
 layout: default
 nav_order: 5
 posted: 2024-04-10
-updated: 2024-04-17
+updated: 2024-04-22
 ---
 
 # Mechanical Assembly
@@ -51,7 +51,7 @@ Since I am not using the stock toolhead, I only built the back half of this asse
 
 # Belt Tensioners
 
-I found the bearings to fit fairly sung in my printed pulleys. In the event of a failure, I will replace them with metal ones. In the meantime, I used `BT1` & `BT2` without the external washers to press fit the F695 bearings in place. Once they were fitted, I put the external washers back in place.
+I found the bearings to fit fairly sung in my printed pulleys. I used `BT1` & `BT2` without the external washers to press fit the F695 bearings in place. Once they were fitted, I put the external washers back in place.
 
 # Z Axis Belt Tensioner
 
@@ -77,13 +77,13 @@ My build uses the 1040mm Z belt and needed `BZA_1040`. Its essentially a combina
 
 <img src="/assets/z_pulley.png" width="300">{: .float-right}{: .ml-3}
 
-At this point, the bottom frame has been assembled with each corner bracket. The rear Z support still needs to be attached, leadscrews inserted, and belt tensioned. I attached `BZA` to the rear extrusion using the T nuts. I bolted the Z tensioner to the right extrusion. While the Z belt was still loose, I inserted each of the 3 three lead screws. When installing the lead screws, make sure they go through both 608 bearings but not so far that it hits the surface below. Secure the lead screws using the grub screws on the 3 Z pulleys. The Z motor pulley may need to be adjusted so it is level with the screw pulleys. I waited until the mounting the bed before I tensioned and secured the Z belt to each pulley.
+At this point, the bottom frame has been assembled with each corner bracket. The rear Z support still needs to be attached, leadscrews inserted, and belt tensioned. I attached `BZA` to the rear extrusion using the T nuts. I bolted the Z tensioner to the right extrusion. While the Z belt was still loose, I inserted each of the 3 three lead screws. When installing the lead screws, make sure they go through both 608 bearings but not so far that it hits the surface below. Secure the lead screws using the grub screws on the three Z pulleys. The Z motor pulley may need to be adjusted so it is level with the screw pulleys. I waited until the mounting the bed before I tensioned and secured the Z belt to each pulley.
 
-Finally, I went ahead and slid the vertical 350mm 2040 extrusions in place and secured them with T nuts. I also placed the rear rubber feet into holes I tapped on the bottom of these extrusions.
+Finally, I went ahead and slid the vertical 350mm 2040 extrusions in place and secured them with T nuts. I also screwed the rear rubber feet into holes I tapped on the bottom of these extrusions.
 
 # Bed Assembly
 
-I assembled the bed using the stock plate option. Use care when tightening the screws that hold the LM12UU bearings. `ZCL` is easy to crack. I reused the lead screw nut from the Ender 3. It was not an exact match to the mounting patter on the printed arms. As a result, I needed use some M2 bolts and a nut to secure it. I will be replacing this particular nut.
+I assembled the bed using the stock plate. Use care when tightening the screws that hold the LM12UU bearings. `ZCL` is easy to crack. I reused the lead screw nut from the Ender 3. It was not an exact match to the mounting pattern on the printed arms. As a result, I needed use some M2 bolts and a nut to secure it. I will be replacing this particular nut.
 
 ## Mounting the Bed Assembly
 
@@ -98,7 +98,7 @@ Follow the manual's instructions on aligning the bed carriage if the screws don'
 
 ## Mounting the Build Plate
 
-The stock build plate can be placed over the stock mounting holes. I used my existing bed springs since they were already the yellow ones. I also used the old adjustment wheels. Make sure to use the printed spacer for the front wheels and cable strain relief.
+The stock build plate can be placed over the stock mounting holes. I used my existing bed springs since they were already the yellow ones. I also used the old adjustment wheels. Make sure to use the printed spacer for the front wheels and the rear cable strain relief.
 
 # Top Frame Assembly
 
@@ -110,7 +110,7 @@ I now mounted the top front corners and placed the entire top assembly on the lo
 
 <img src="/assets/frame_assemble.png" width="300">{: .float-right}{: .ml-3}
 
-Check each corner of the frame for a square assembly. I used a speed square along with a solid flat surface. Make sure to tighten the bolts securing each corner bracket. Tighten the set screws on the top and bottom front joints that hold the 12mm rods in place. Move X/Y/Z for their full range of motion to check for binding and make adjustments as needed.
+Check each corner of the frame for a square assembly. I used a speed square along with a solid flat surface. Make sure to tighten the bolts securing each corner bracket. Tighten the set screws on the top and bottom front joints that hold the 12mm rods in place. Move the X, Y, & Z axes for their full range of motion to check for binding. Make adjustments as needed.
 
 I also added the top `FCB2` and bottom `FCB1` frame corner braces at this time.
 
