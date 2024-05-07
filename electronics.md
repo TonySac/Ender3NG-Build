@@ -4,7 +4,7 @@ layout: default
 nav_order: 6
 has_children: true
 posted: 2024-04-17
-updated: 2024-04-22
+updated: 2024-04-30
 ---
 
 # Electronics
@@ -87,7 +87,10 @@ I reused the stock Ender 3 bed including heater and thermistor. This just requir
 
 # Switches and LEDs
 
-{: .mod }
-:wrench: I skipped the endstop switches in favor of sensorless homing.
+The Y endstop switch gets mounted on the A motor mount. Originally I planned to use sensorless homing and still will for the X axis. However I had some issues with the calibarating sensorles homing on the Y So I returned to a standard switch. Keeping with the E3NG spirit, I reused an Ender 3 switch and some wiring. I cut the endstop out of the old mounting board and used some DuPont connectors for the pins. For reference, the X endstop is would be secured to the rear of the toolhead carriage and the Z endstop is screwed into the Z motor mount.
 
-I'm still mapping out my plans for LEDs.
+The Stealthburner toolhead already has some integrated LEDs. Other than that, I am planning on mounting some in the print area but have yet to map that out.
+
+# LCD Screen
+
+I would like to add a screen. Since I'm using the EXP1 header for CANbus I am still trying to figure this part out.

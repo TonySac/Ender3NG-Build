@@ -10,7 +10,9 @@ updated: 2024-04-22
 
 ---
 
-This documentation logs my Ender 3 NG build. It serves as a log of my process and in some parts an unofficial guide. I did not build this E3NG exactly to spec. It will likely become a project printer that I continue to tinker with. I plan to continue to update these pages as things change and progress. I started the project in March 2024 during a in beta release.
+This documentation logs my Ender 3 NG build. It serves as a log of my process and in some parts an unofficial guide. I did not build this E3NG exactly to spec. It will likely become a project printer that I continue to tinker with. I plan to continue to update these pages as things change and progress. I started the project in March 2024 during a beta release.
+
+> Keep in mind, this is my specific printer. I have attempted to generalize some parts of this documentation but it really is a reference to myself and my process. There are no guarantees this information is 100% correct, up to date, or will even work. I am not responsible for any damage or harm from trying the things outlined in this document.
 
 I've attempted to call out things I found along the build journey using the following highlights:
 
