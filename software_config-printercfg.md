@@ -13,10 +13,10 @@ posted: 2024-05-07
 
 I chose to generate my own initial configuration from previous knowledge while also referring to my other printers and [Klipper's configuration reference](https://www.klipper3d.org/Config_Reference.html).
 
-This document covers the step by step generation of my *printer.cfg* file. Subsequent pages will cover some of the `[include]` files along with startup and tuning checks.
+This document covers the step by step generation of my *printer.cfg* file.
 
 {: .note }
-:pencil2: I found it easier to do some of the startup checks as the configuration was generated. For brevity of this document, I broke them out into a separate write ups and included a link when nessicary.
+:pencil2: I found it easier to do some of the startup checks/tuning as the configuration was generated. For brevity of this document, I broke them out into a [Startup Tuning](/software_config-printercfg-start_tune.html) sub document and linked out as needed.
 
 My configuration is broken down as follows:
 
@@ -243,6 +243,8 @@ control_pin: EBB36_Toolhead: PB6
 y_offset: -18 #Measured per printer/mount. `x_offset` can also be specified.
 z_offset: 0 # Required initially but will be tuned.
 ```
+
+Addtional features of the probe are discussed [here].
 
 At this point, all of the motion components have been defined. A `Save & Restart` should bring Klipper back online with no errors and some motion control available on the front end.
 

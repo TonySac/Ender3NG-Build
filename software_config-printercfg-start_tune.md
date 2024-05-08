@@ -183,7 +183,7 @@ Similar to the extruder, check the heated bed. Set the bed temp to 50&deg;C. The
 
 # PID Tune
 
-Althoug not immeadtly requried, it is helpful to tune the PID controller prior to attempting a print. This avoids heater out of range errors. Make sure to set the printer up and tune for as close to normal printing condtions as possible.
+Although not immediately required, it is helpful to tune the PID controller prior to attempting a print. This avoids heater out of range errors. Make sure to set the printer up and tune for as close to normal printing conditions as possible.
 
 Run `PID_CALIBRATE HEATER=heater_bed TARGET=##` to calibrate the bed. Where `TARGET=##` should be the bed temperature planned to be used. Once this is complete save the values and run it again but this time for `HEATER=extruder` along with the appropriate temperature. I also recommend setting the print fan to the expected speed for this calibration.
 
